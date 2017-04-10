@@ -1,0 +1,13 @@
+The runtime was tested on the file called tenMBfile.txt.
+
+Runtime for the first implementation:
+real	0m0.014s
+user	0m0.012s
+sys		0m0.000s
+
+Runtime for the second implemenation (systemcalls):
+real	0m2.553s	
+user	0m0.212s
+sys     0m2.340s
+
+The reason why the runtime is longer for the second implementation is because a system calls is used to call into the kernel code (generally causing an interrupt). So the the file goes from the application to the kernel and then back to the application so doing a system call takes longer to perform. The second reason is because since we are reading in one character at a time, it takes a lot longer than the first implemenation.

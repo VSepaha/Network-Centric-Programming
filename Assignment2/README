@@ -1,0 +1,14 @@
+Compiling and Running:
+1) Call the make command
+2) run ./proxy <port number>
+
+(
+if this doesnt work, it can be manually compiled by:
+gcc proxy.c csapp.c -o proxy -pthread
+)
+
+A few issues with the code:
+In theory what I wrote is correct, but there is something wrong in my code
+where it is only showing about half of the web page and only in the basic 
+html.
+The site www.gnu.org is not working for me since it does not give me a get request.
